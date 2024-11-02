@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MarshTeleport : MonoBehaviour
+public class MarshTeleport : Sounds
 {
     public Camera mainCamera; // Ссылка на основную камеру
     public Transform teleportCenter; // Центр, вокруг которого будем телепортироваться
@@ -32,17 +32,12 @@ public class MarshTeleport : MonoBehaviour
 
         if (isTeleported)
         {
-            // Создаем "пооф" эффект в точке, где объект исчезает
-            // GameObject disappearEffect = Instantiate(poofEffect, transform.position, Quaternion.identity);
-            // Destroy(disappearEffect, effectDuration); // Удаляем эффект через 0.1 секунды
-
-            // Выбираем новую позицию в радиусе вокруг объекта "teleportCenter"
             Vector2 randomOffset = Random.insideUnitCircle * teleportRadius;
             Vector3 newPosition = new Vector3(teleportCenter.position.x + randomOffset.x, teleportCenter.position.y + randomOffset.y, transform.position.z);
             
             // Телепортируем объект
             transform.position = newPosition;
-
+            PlaySound(sounds[0]);
             // Создаем "пооф" эффект в новой точке
             GameObject appearEffect = Instantiate(poofEffect, newPosition, Quaternion.identity);
             Destroy(appearEffect, effectDuration); // Удаляем эффект через 0.1 секунды
