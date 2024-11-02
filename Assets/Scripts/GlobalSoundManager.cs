@@ -9,11 +9,5 @@ public class GlobalSoundManager : Sounds
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        PlaySound(sounds[0]);   
-        if (Input.GetMouseButtonDown(0)){
-            
-        }
-    }
+
 }

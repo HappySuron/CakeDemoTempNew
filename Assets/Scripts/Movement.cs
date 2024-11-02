@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal"); // Для A и D
         movement.y = Input.GetAxisRaw("Vertical"); // Для W и S
     }
-
+    
     void FixedUpdate()
     {
         // Перемещаем персонажа

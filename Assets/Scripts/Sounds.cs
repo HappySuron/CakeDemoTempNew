@@ -1,16 +1,17 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Sounds : MonoBehaviour
 {
-    public AudioClip[] sounds;
+    public AudioClip[] sounds; // Массив звуков
+    public SoundArrays[] randSound; // Массив звуков для случайного выбора
 
     private AudioSource audioSrc;
 
-    void Start()
+    private void Awake()
     {
-        // Проверяем наличие AudioSource и добавляем, если его нет
+        // Инициализируем AudioSource, если он не был добавлен
         audioSrc = GetComponent<AudioSource>();
         if (audioSrc == null)
         {
@@ -18,9 +19,43 @@ public class Sounds : MonoBehaviour
         }
     }
 
-    public void PlaySound(AudioClip clip, float volume = 1f, bool destroyed = false, float p1 = 1f, float p2 = 1f)
+    public void PlaySound(int i, float volume = 1f, bool random = false, bool destroyed = false, float p1 = 0.85f, float p2 = 1.2f)
     {
+        // Проверка на выход индекса за пределы массива
+        if (i < 0 || i >= (random ? randSound.Length : sounds.Length))
+        {
+            Debug.LogError("Sound index out of range: " + i);
+            return;
+        }
+
+        AudioClip clip;
+        if (random)
+        {
+            // Случайный выбор из массива звуков
+            clip = randSound[i].soundArray[Random.Range(0, randSound[i].soundArray.Length)];
+        }
+        else
+        {
+            clip = sounds[i];
+        }
+
+        // Установка случайного тона
         audioSrc.pitch = Random.Range(p1, p2);
-        audioSrc.PlayOneShot(clip, volume);
+        Debug.Log("Playing sound: " + clip.name);
+
+        if (destroyed)
+        {
+            AudioSource.PlayClipAtPoint(clip, transform.position, volume);
+        }
+        else
+        {
+            audioSrc.PlayOneShot(clip, volume);
+        }
+    }
+
+    [System.Serializable]
+    public class SoundArrays
+    {
+        public AudioClip[] soundArray; // Массив аудиоклипов для случайного выбора
     }
 }
