@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class MarshTeleport : Sounds
 {
-    public Camera mainCamera; // Ссылка на основную камеру
-    public Transform teleportCenter; // Центр, вокруг которого будем телепортироваться
-    public float teleportRadius = 2f; // Радиус телепортации вокруг центра
-    public float offset = 0.5f; // Небольшой отступ для выхода за экран
-    public GameObject poofEffect; // Эффект для появления и исчезновения
-    public float effectDuration = 0.1f; // Время, через которое "пооф" эффект удаляется
+    public Camera mainCamera;
+    public Transform teleportCenter;
+    public float teleportRadius = 2f;
+    public float offset = 0.5f;
+    public GameObject poofEffect;
+    public float effectDuration = 0.1f;
 
     void Update()
     {
@@ -18,13 +18,10 @@ public class MarshTeleport : Sounds
 
         bool isTeleported = false;
 
-        // Проверка горизонтальных границ
         if (transform.position.x < screenLeft.x - offset || transform.position.x > screenRight.x + offset)
         {
             isTeleported = true;
         }
-
-        // Проверка вертикальных границ
         if (transform.position.y < screenBottom.y - offset || transform.position.y > screenTop.y + offset)
         {
             isTeleported = true;
@@ -34,13 +31,10 @@ public class MarshTeleport : Sounds
         {
             Vector2 randomOffset = Random.insideUnitCircle * teleportRadius;
             Vector3 newPosition = new Vector3(teleportCenter.position.x + randomOffset.x, teleportCenter.position.y + randomOffset.y, transform.position.z);
-            
-            // Телепортируем объект
             transform.position = newPosition;
-            PlaySound(sounds[0]);
-            // Создаем "пооф" эффект в новой точке
+            PlaySound(0);
             GameObject appearEffect = Instantiate(poofEffect, newPosition, Quaternion.identity);
-            Destroy(appearEffect, effectDuration); // Удаляем эффект через 0.1 секунды
+            Destroy(appearEffect, effectDuration);
         }
     }
 }

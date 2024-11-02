@@ -44,7 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfa2248dd2c2e441b65308ffd608b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 1aae4ee973a1e9e4f9f56f88603abeca, type: 3}
   enemyPrefab: {fileID: 4132161736809161179, guid: 4450917a913ceac4bb05f645c50a2c25, type: 3}
   spawnPoint: {fileID: 2458536937092637219}
   spawnRadius: 5
   maxEnemies: 3
+  poofEffect: {fileID: 2477585010973908350, guid: df2498b342f033242b3f70d13014487d, type: 3}
+  effectDuration: 0.1

@@ -1,29 +1,162 @@
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : Sounds
 {
     public float speed = 3.0f;
     public float attackRange = 0.5f;
     public int damage = 10;
-    private Transform target;
+    //private Transform target;
     private Rigidbody2D rb;
+
+    public GameObject poofEffect;
+
+    public float effectDuration = 0.3f;
+
+    public GameObject exclamationMarkPrefab;
+    public float exclamationMarkHeight = 1.5f;
+    private GameObject currentExclamationMark;
+
+    public enum State
+    {
+        Idle,
+        Chasing,
+        Attacking,
+        Cooldown
+    }
+
+    public State currentState = State.Idle;
+    public GameObject targetUnit;
+    public float chaseRange = 10f;
+    public float attackTime = 1f;
+    public float cooldownTime = 2f;
+
+    private float attackTimer;
+    private float cooldownTimer;
+
 
     private void Start()
     {
-        // target = GameObject.FindGameObjectWithTag("Cake").transform;
-        // rb = GetComponent<Rigidbody2D>();
+        SetState(State.Idle);
+        targetUnit = GameObject.FindGameObjectWithTag("Cake");
+        rb = GetComponent<Rigidbody2D>();
+        PlaySound(0);
+        GameObject appearEffect = Instantiate(poofEffect, this.transform.position, Quaternion.identity);
+        Destroy(appearEffect, effectDuration);
     }
 
+    
     private void Update()
     {
-        MoveTowardsPlayer();
-        CheckAttack();
+    switch (currentState)
+        {
+            case State.Idle:
+                Idle();
+                break;
+            case State.Chasing:
+                Chase();
+                break;
+            case State.Attacking:
+                Attack();
+                break;
+            case State.Cooldown:
+                Cooldown();
+                break;
+        }
+        // MoveTowardsPlayer();
+        // CheckAttack();
     }
+
+
+    private void Idle()
+    {
+        if (targetUnit != null)
+        {
+            SetState(State.Chasing);
+        }
+    }
+
+
+        private void Chase()
+    {
+        if (targetUnit != null)
+        {
+            MoveTowardsPlayer();
+            float distanceToTargetUnit = Vector3.Distance(transform.position, targetUnit.transform.position);
+            if (distanceToTargetUnit > chaseRange)
+            {
+                SetState(State.Idle);
+            }
+            else if (distanceToTargetUnit <= attackRange)
+            {
+                SetState(State.Attacking);
+            }
+        }
+        else
+        {
+            SetState(State.Idle);
+        }
+    }
+
+    private void Attack()
+    {
+        // Vector2 curPosition = this.transform.position.normalized;
+        // rb.MovePosition(rb.position + curPosition * speed * Time.deltaTime);
+        attackTimer -= Time.deltaTime;
+        if (attackTimer <= 0)
+        {
+            targetUnit.GetComponent<PlayerHealth>().TakeDamage(damage);
+            HideExclamationMark();
+            PlaySound(1, random:true);
+            SetState(State.Cooldown); // Перейти в состояние Cooldown после атаки
+        }
+    }
+
+
+    private void Cooldown()
+    {
+        cooldownTimer -= Time.deltaTime;
+        if (cooldownTimer <= 0)
+        {
+        float distanceToTargetUnit = Vector3.Distance(transform.position, targetUnit.transform.position);
+        
+        if (distanceToTargetUnit <= attackRange)
+        {
+            // Если враг находится в радиусе атаки, перейти в состояние атаки
+            SetState(State.Attacking);
+        }
+        else if (distanceToTargetUnit <= chaseRange)
+        {
+            // Если враг находится в радиусе погони, перейти в состояние погони
+           SetState(State.Chasing);
+        }
+        else
+        {
+            // В противном случае вернуться в состояние Idle
+            SetState(State.Idle);
+        }
+        }
+    }
+
+    public void SetState(State newState)
+    {
+        currentState = newState;
+
+        if (newState == State.Attacking)
+        {
+            attackTimer = attackTime;
+            ShowExclamationMark();
+        }
+        else if (newState == State.Cooldown)
+        {
+            cooldownTimer = cooldownTime;
+        }
+    }
+
 
    private void MoveTowardsPlayer()
 {
     // Основное направление к игроку
-    Vector2 direction = (target.position - transform.position).normalized;
+    Vector2 direction = (targetUnit.transform.position - transform.position).normalized;
     Vector2 avoidanceVector = Vector2.zero;
 
     // Найти всех врагов в радиусе и корректировать направление
@@ -38,16 +171,36 @@ public class EnemyController : MonoBehaviour
     }
 
     // Уменьшаем влияние avoidanceVector, чтобы враги меньше отклонялись
-    Vector2 movement = (direction + avoidanceVector * 0.5f).normalized; 
+    Vector2 movement = (direction + avoidanceVector * 0.5f).normalized;
+
     rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
 }
 
-    private void CheckAttack()
+
+    private void ShowExclamationMark()
     {
-        if (Vector2.Distance(transform.position, target.position) <= attackRange)
+        if (currentExclamationMark == null)
         {
-            // Нанесение урона главному герою
-            target.GetComponent<PlayerHealth>().TakeDamage(damage);
+            Vector3 exclamationMarkPosition = transform.position + Vector3.up * exclamationMarkHeight;
+            currentExclamationMark = Instantiate(exclamationMarkPrefab, exclamationMarkPosition, Quaternion.identity);
+            currentExclamationMark.transform.SetParent(transform);
         }
     }
+
+    private void HideExclamationMark()
+    {
+        if (currentExclamationMark != null)
+        {
+            Destroy(currentExclamationMark);
+            currentExclamationMark = null;
+        }
+    }
+    // private void CheckAttack()
+    // {
+    //     if (Vector2.Distance(transform.position, targetUnit.position) <= attackRange)
+    //     {
+    //         // Нанесение урона главному герою
+    //         targetUnit.GetComponent<PlayerHealth>().TakeDamage(damage);
+    //     }
+    // }
 }

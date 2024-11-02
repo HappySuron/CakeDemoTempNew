@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 990d196d65970aa479e40b62e8415198
+guid: c4b2f0f4633025048a232adbb2b95e16
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5029872481593009327
-    second: for_0
+      213: 2690644347013379016
+    second: warning-sign_0
+  - first:
+      213: 8627477967127392474
+    second: warning-sign_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: for_0
+      name: warning-sign_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1792
-        height: 1024
+        x: 191
+        y: 103
+        width: 130
+        height: 409
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15bd22d90ad423ab0800000000000000
-      internalID: -5029872481593009327
+      spriteID: 8c335a827c6175520800000000000000
+      internalID: 2690644347013379016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warning-sign_1
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 0
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad033223085fab770800000000000000
+      internalID: 8627477967127392474
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      for_0: -5029872481593009327
+      warning-sign_0: 2690644347013379016
+      warning-sign_1: 8627477967127392474
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
