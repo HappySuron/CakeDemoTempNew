@@ -153,7 +153,7 @@ public class EnemyController : Sounds
     }
 
 
-   private void MoveTowardsPlayer()
+private void MoveTowardsPlayer()
 {
     // Основное направление к игроку
     Vector2 direction = (targetUnit.transform.position - transform.position).normalized;
