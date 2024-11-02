@@ -19,7 +19,7 @@ public class MashKnife : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Knife"){
+        if(col.tag == "Knife" && _hasKnife == false){
             Destroy(col.gameObject);
             _hasKnife = true;
         }

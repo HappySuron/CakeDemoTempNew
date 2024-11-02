@@ -18,7 +18,7 @@ public class CakeKnife : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        attackTimer = cooldownTime;
     }
 
     // Update is called once per frame
@@ -54,6 +54,7 @@ public class CakeKnife : MonoBehaviour
                 attackTimer -= Time.deltaTime;
                 if (attackTimer <= 0)
                 {
+                    _hasKnife = false;
                     attackTimer = cooldownTime;
                     closestObject.GetComponent<EnemyHealth>().GetDamage(_damage);
                 }
