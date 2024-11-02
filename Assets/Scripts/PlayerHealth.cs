@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerHealth : Sounds
 {
     public int health = 100;
-
+    public float speed = 2f;
     public void TakeDamage(int damage)
     {
         

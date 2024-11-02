@@ -4,7 +4,6 @@ using UnityEngine;
 public class CandlesTrap : Trap
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public string requiredTag = "Cake";
     public GameObject poofEffect;
     float effectDuration = 0.3f;
 
@@ -26,14 +25,21 @@ public class CandlesTrap : Trap
     {
         if (active) {
         Debug.Log("Collision detected with: " + other.name);
-        if (other.CompareTag(requiredTag))
+        if (other.CompareTag("Cake"))
             {
                 Debug.Log("Destroying object: " + other.gameObject.name);
                 Destroy(other.gameObject);
                 GameObject appearEffect = Instantiate(poofEffect, other.transform.position, Quaternion.identity);
                 Destroy(appearEffect, effectDuration);
+            }       
+            else if (other.CompareTag("Player"))
+            {
+            Debug.Log("set on fire");
+            other.GetComponent<MarshBasic>().SetOnFire();
+
             }
         }
+
     }
 
     public override void Act()
