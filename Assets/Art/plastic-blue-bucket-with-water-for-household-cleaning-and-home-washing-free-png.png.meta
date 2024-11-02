@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 65d3ed4daf3ef0d4b9382a3e0d1a2087
+guid: ac77546c765497e4cb664fff1ba7050e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4103188491126979362
-    second: red_bar_0
+      213: -6620120562988628094
+    second: plastic-blue-bucket-with-water-for-household-cleaning-and-home-washing-free-png_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: red_bar_0
+      name: plastic-blue-bucket-with-water-for-household-cleaning-and-home-washing-free-png_0
       rect:
         serializedVersion: 2
-        x: 110
-        y: 132
-        width: 385
-        height: 614
+        x: 185
+        y: 113
+        width: 611
+        height: 754
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed4c7e39ecb8e07c0800000000000000
-      internalID: -4103188491126979362
+      spriteID: 287cdc04c6b9024a0800000000000000
+      internalID: -6620120562988628094
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      red_bar_0: -4103188491126979362
+      plastic-blue-bucket-with-water-for-household-cleaning-and-home-washing-free-png_0: -6620120562988628094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
