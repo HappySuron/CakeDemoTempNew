@@ -706,6 +706,14 @@ PrefabInstance:
       propertyPath: actingObjext
       value: 
       objectReference: {fileID: 4621637176632945541}
+    - target: {fileID: 6322077212670598654, guid: 04db515f2c073434baa9b3ca7b25da7b, type: 3}
+      propertyPath: buttonPressed
+      value: 
+      objectReference: {fileID: 8346901879194642381, guid: 7bb73b845f835774a913d64d42e23989, type: 3}
+    - target: {fileID: 6322077212670598654, guid: 04db515f2c073434baa9b3ca7b25da7b, type: 3}
+      propertyPath: buttonUnpresserd
+      value: 
+      objectReference: {fileID: -8132984616880557591, guid: 3fb6dce691612e3499adc97a43ba0fb1, type: 3}
     - target: {fileID: 9189690589932422987, guid: 04db515f2c073434baa9b3ca7b25da7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -836,11 +844,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2448759173556498653, guid: f1614d7927cabf3478eebda9215ea2fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.29
+      value: 5.27
       objectReference: {fileID: 0}
     - target: {fileID: 2448759173556498653, guid: f1614d7927cabf3478eebda9215ea2fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -2.88
       objectReference: {fileID: 0}
     - target: {fileID: 2448759173556498653, guid: f1614d7927cabf3478eebda9215ea2fe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -874,6 +882,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4055119392944854074, guid: f1614d7927cabf3478eebda9215ea2fe, type: 3}
+      propertyPath: candlesOn
+      value: 
+      objectReference: {fileID: 2439228211136827020, guid: f8a3db4dda128b544bca4b6310a3ed0e, type: 3}
+    - target: {fileID: 4055119392944854074, guid: f1614d7927cabf3478eebda9215ea2fe, type: 3}
+      propertyPath: candlesOff
+      value: 
+      objectReference: {fileID: 2375992339220005619, guid: ca0b60de299477c4281ac45e4202a9b8, type: 3}
     - target: {fileID: 5435648123133980606, guid: f1614d7927cabf3478eebda9215ea2fe, type: 3}
       propertyPath: m_Name
       value: candlesTrap

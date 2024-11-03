@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.6, y: -4, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1.1901383, y: 1.1901383, z: 2.3802767}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 2439228211136827020, guid: f8a3db4dda128b544bca4b6310a3ed0e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c28615d375e1344fa1a1ee068ecfdb7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,17 +123,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.055524617, y: -0.73569334}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 10}
+    oldSize: {x: 2.56, y: 5.16}
     newSize: {x: 2.5, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.5, y: 10}
+  m_Size: {x: 1.8003712, y: 3.589114}
   m_EdgeRadius: 0
 --- !u!114 &4055119392944854074
 MonoBehaviour:
@@ -148,5 +148,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poofEffect: {fileID: 2477585010973908350, guid: df2498b342f033242b3f70d13014487d, type: 3}
-  candlesOn: {fileID: 0}
-  candlesOff: {fileID: 0}
+  candlesOn: {fileID: 21300000, guid: 0c28615d375e1344fa1a1ee068ecfdb7, type: 3}
+  candlesOff: {fileID: 21300000, guid: 37b577a5bdf216b44ac12477e13eb0bf, type: 3}
