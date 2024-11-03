@@ -6,6 +6,8 @@ public class RoomPositionTriggerEnter : MonoBehaviour
     [SerializeField]
     private int positionType = 0;
 
+    public bool alreadyPassed = false;
+
     private void Start()
     {
         parentRoom = GetComponentInParent<RoomVirtual>();
@@ -13,11 +15,22 @@ public class RoomPositionTriggerEnter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("AAAAAAAAAAA");
-        if (parentRoom != null && other.CompareTag("Cake"))
+    
+    Debug.Log($"Triggered by: {other.gameObject.name} | Already passed: {alreadyPassed}");
+    
+    if (parentRoom != null && other.CompareTag("Cake"))
+    {
+        if (!alreadyPassed)
         {
+            alreadyPassed = true;
+            Debug.Log("Curr type: " + positionType);
             parentRoom.OneOfThePosTriggered(positionType);
         }
+        else
+        {
+            Debug.Log("Already passed this trigger.");
+        }
+    }
     }
 
 }

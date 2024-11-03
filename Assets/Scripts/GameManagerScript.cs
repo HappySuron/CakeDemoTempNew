@@ -8,12 +8,15 @@ public class GameManagerScript : MonoBehaviour
     public static GameManagerScript Instance {get; private set;}
     [SerializeField] 
     public List<GameObject> rooms;
-    private int indexRoom = 0;
+    public int indexRoom = 0;
     public GameObject cake;
 
     public bool isReadyToMove = false;
 
     Transform curTargetPosition;
+
+
+    public int enemyCounter;
 
     void Start()
     {
@@ -27,6 +30,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void GoAnotherRoom(){
         indexRoom++;
+        Debug.Log("GoAnotherRoomMan");
         curTargetPosition = rooms[indexRoom].GetComponent<RoomVirtual>().startPosition.transform;
     }
 
@@ -44,7 +48,7 @@ public class GameManagerScript : MonoBehaviour
     private void MoveCake(Vector3 targetPosition)
     {
         float speed = cake.GetComponent<PlayerHealth>().speed;
-        Debug.Log(targetPosition);
+       // Debug.Log(targetPosition);
         cake.transform.position = Vector3.MoveTowards(cake.transform.position, targetPosition, speed * Time.deltaTime);
     }
 }

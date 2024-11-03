@@ -23,6 +23,8 @@ public class EnemyHealth : Sounds
         if(_health <= 0) {
             PlaySound(0, p1: 1, p2: 1, destroyed:true, random: true);
             Debug.Log("Enemy " + gameObject.name + " is dead");
+            GameManagerScript _managerInstance = GameManagerScript.Instance;
+            _managerInstance.enemyCounter--;
             Destroy(gameObject);
         }
     }

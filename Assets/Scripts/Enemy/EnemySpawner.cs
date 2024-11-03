@@ -14,18 +14,20 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        SpawnEnemies();
+        //SpawnEnemies();
     }
     private void SpawnEnemy()
     {
         Vector2 spawnPosition = spawnPoint.position + (Vector3)Random.insideUnitCircle * spawnRadius;
         GameObject newEnemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
         enemies.Add(newEnemy);
+        GameManagerScript _managerInstance = GameManagerScript.Instance;
+        _managerInstance.enemyCounter++;
     }
 
-    public void SpawnEnemies()
+    public void SpawnEnemies(int amount)
     {
-        for (int i = 0; i < maxEnemies;i++)
+        for (int i = 0; i < amount;i++)
         {
              SpawnEnemy();
         }
