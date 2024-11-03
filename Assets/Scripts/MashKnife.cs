@@ -27,7 +27,7 @@ public class MashKnife : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag == "Cake"){
+        if(col.gameObject.tag == "Cake" && _hasKnife == true){
             col.gameObject.GetComponent<CakeKnife>().GetKnife();
             _hasKnife = false;
         }
