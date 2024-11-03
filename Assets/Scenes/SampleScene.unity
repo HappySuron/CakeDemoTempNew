@@ -169,7 +169,7 @@ MonoBehaviour:
   - {fileID: 4840102416741360365}
   indexRoom: 0
   cake: {fileID: 1340355868}
-  isReadyToMove: 0
+  isReadyToMove: 1
   enemyCounter: 0
 --- !u!1 &132755101
 GameObject:

@@ -8,7 +8,7 @@ public class PlayerHealth : Sounds
 
     public int healthMax;
 
-    [SerializeField] private Image healthBar;
+    //[SerializeField] private Image healthBar;
 
     private void Start()
     {
@@ -22,7 +22,7 @@ public class PlayerHealth : Sounds
 
     public void UpdateHPBar()
     {
-        healthBar.fillAmount = (float)health / (float)healthMax;
+        //healthBar.fillAmount = (float)health / (float)healthMax;
     }
 
     public void TakeDamage(int damage)
