@@ -19,6 +19,7 @@ public class CakeKnife : MonoBehaviour
     void Start()
     {
         attackTimer = cooldownTime;
+        //test
     }
 
     // Update is called once per frame
