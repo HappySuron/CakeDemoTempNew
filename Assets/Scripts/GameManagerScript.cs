@@ -51,4 +51,20 @@ public class GameManagerScript : MonoBehaviour
        // Debug.Log(targetPosition);
         cake.transform.position = Vector3.MoveTowards(cake.transform.position, targetPosition, speed * Time.deltaTime);
     }
+
+
+    public void StartFromCheckpoint(){
+        if (cake!=null){
+            curTargetPosition = rooms[indexRoom].GetComponent<RoomVirtual>().startPosition;
+            cake.transform.position = curTargetPosition.position;
+            cake.GetComponent<PlayerHealth>().health = cake.GetComponent<PlayerHealth>().healthMax;
+            rooms[indexRoom].GetComponent<RoomVirtual>().ResetCurrentRoom();
+        }
+    }
+
+
+    public void ResetNextRoom(){
+        if (rooms[indexRoom+1]!=null)
+            rooms[indexRoom+1].GetComponent<RoomVirtual>().ResetCurrentRoom();
+    }
 }

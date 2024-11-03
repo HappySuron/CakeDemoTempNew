@@ -6,7 +6,7 @@ public class PlayerHealth : Sounds
     public int health = 100;
     public float speed = 2f;
 
-    private int healthMax;
+    public int healthMax;
 
     [SerializeField] private Image healthBar;
 
@@ -27,15 +27,21 @@ public class PlayerHealth : Sounds
 
     public void TakeDamage(int damage)
     {
-
+        health -= damage;
         if (health <= 0)
         {
             Debug.Log("Player is dead!");
             PlaySound(0, p1: 1, p2: 1);
+
+
+
+        //-----------------------------------------------------------------------------HERE TO SET DEATH SCREEN
+        GameManagerScript _managerInstance = GameManagerScript.Instance;
+        _managerInstance.StartFromCheckpoint();
+
         }
         else
         {
-            health -= damage;
             if (Random.Range(0, 4) == 0)
             {
                 PlaySound(1, random: true, p1: 1, p2: 1);

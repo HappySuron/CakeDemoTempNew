@@ -9,7 +9,8 @@ public class CandlesTrap : Trap
 
     bool active = true;
 
-    public Sprite newSprite;
+    public Sprite candlesOn;
+    public Sprite candlesOff;
     private SpriteRenderer spriteRenderer;
 
     private void Start()
@@ -28,7 +29,7 @@ public class CandlesTrap : Trap
         if (other.CompareTag("Cake"))
             {
                 Debug.Log("Destroying object: " + other.gameObject.name);
-                Destroy(other.gameObject);
+                other.GetComponent<PlayerHealth>().TakeDamage(99999);
                 GameObject appearEffect = Instantiate(poofEffect, other.transform.position, Quaternion.identity);
                 Destroy(appearEffect, effectDuration);
             }       
@@ -45,22 +46,30 @@ public class CandlesTrap : Trap
     public override void Act()
     {
         active = false;
-        Debug.Log("Act() method called in CandlesTrap");
-
         if (spriteRenderer == null)
         {
-            Debug.LogError("spriteRenderer is null in Act()");
             return;
         }
 
-        if (newSprite == null)
+        if (candlesOff == null)
         {
-            Debug.LogError("newSprite is null in Act()");
+            return;
+        }
+        spriteRenderer.sprite = candlesOff;
+    }
+
+
+    public void ResetTrap(){
+        active = true;
+        if (spriteRenderer == null)
+        {
             return;
         }
 
-        // Change the sprite to newSprite
-        spriteRenderer.sprite = newSprite;
-        Debug.Log("Sprite has been changed to newSprite");
+        if (candlesOn == null)
+        {
+            return;
+        }
+        spriteRenderer.sprite = candlesOn;
     }
 }

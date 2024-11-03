@@ -32,4 +32,14 @@ public class EnemySpawner : MonoBehaviour
              SpawnEnemy();
         }
     }
+
+    public void DestroyAllOfEnemies(){
+    GameManagerScript _managerInstance = GameManagerScript.Instance;
+    foreach (GameObject enemy in enemies)
+    {
+        Destroy(enemy);
+        _managerInstance.enemyCounter--;
+    }
+    enemies.Clear();
+    }
 }
