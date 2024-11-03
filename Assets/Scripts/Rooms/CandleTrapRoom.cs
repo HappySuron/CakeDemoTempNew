@@ -45,6 +45,11 @@ public class CandleTrapRoom : RoomVirtual
         {
             childCandles.GetComponent<CandlesTrap>().ResetTrap();
         }
+        Transform childButton = transform.Find("buttonTrap");
+        if (childCandles != null)
+        {
+            childButton.GetComponent<SimpleButton>().ResetButton();
+        }
         this.startPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
         this.encounterPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
         this.finishPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;

@@ -16,11 +16,6 @@ public class CandlesTrap : Trap
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
-        if (spriteRenderer == null)
-        {
-            Debug.LogError("SpriteRenderer is not attached to the CandlesTrap GameObject.");
-        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
