@@ -2,22 +2,20 @@ using UnityEngine;
 
 public class SimpleButton : MonoBehaviour
 {
-    public Trap actingObjext; // Объект, который нужно удалить
+    public Trap actingObjext;
 
-    public string requiredTag = "Player"; // Тег для проверки
+    public string requiredTag = "Player";
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(requiredTag))
         {
             ActivateObject();
-            Debug.Log("FFFF");
         }
     }
 
     private void ActivateObject()
     {
-        // Удаляем указанный объект
         if (actingObjext != null)
         {
             actingObjext.Act();

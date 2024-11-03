@@ -28,10 +28,11 @@ public class RoomVirtual: MonoBehaviour
                 StartPositionAction();
             break;
             case 2:
-                encounterPositionAction();
+                EncounterPositionAction();
             break;
             case 3:
-                finishPositionAction();
+                FinishPositionAction();
+                GameManagerScript _managerInstance = GameManagerScript.Instance;
             break;
             default:
 
@@ -46,16 +47,24 @@ public class RoomVirtual: MonoBehaviour
     }
 
 
-    virtual public void encounterPositionAction(){
+    virtual public void EncounterPositionAction(){
         Debug.Log("EncounterPosition");
         GameManagerScript _managerInstance = GameManagerScript.Instance;
         _managerInstance.ChangeCurTarget(this.finishPosition);
     }
 
 
-    virtual public void finishPositionAction(){
+    virtual public void FinishPositionAction(){
         Debug.Log("FinishPosition");
         GameManagerScript _managerInstance = GameManagerScript.Instance;
+        _managerInstance.ResetNextRoom();
         _managerInstance.GoAnotherRoom();
+    }
+
+
+    virtual public void ResetCurrentRoom(){
+        startPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
+        encounterPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
+        finishPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
     }
 }

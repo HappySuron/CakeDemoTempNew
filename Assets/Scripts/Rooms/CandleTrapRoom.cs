@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CandleTrapRoom : RoomVirtual
 {
+
     override public void OneOfThePosTriggered(int typeOfPos){
         switch (typeOfPos)
         {
@@ -13,10 +14,10 @@ public class CandleTrapRoom : RoomVirtual
                 StartPositionAction();
             break;
             case 2:
-                encounterPositionAction();
+                EncounterPositionAction();
             break;
             case 3:
-                finishPositionAction();
+                FinishPositionAction();
             break;
             default:
 
@@ -24,7 +25,7 @@ public class CandleTrapRoom : RoomVirtual
         }
     }
 
-    override public void encounterPositionAction()
+    override public void EncounterPositionAction()
     {
         StartCoroutine(WaitAndDoSomething());
     }
@@ -35,5 +36,17 @@ public class CandleTrapRoom : RoomVirtual
         Debug.Log("5 seconds have passed!");
         GameManagerScript _managerInstance = GameManagerScript.Instance;
         _managerInstance.ChangeCurTarget(this.finishPosition);
+    }
+
+
+    override public void ResetCurrentRoom(){
+        Transform childCandles = transform.Find("candlesTrap");
+        if (childCandles != null)
+        {
+            childCandles.GetComponent<CandlesTrap>().ResetTrap();
+        }
+        this.startPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
+        this.encounterPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
+        this.finishPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
     }
 }
