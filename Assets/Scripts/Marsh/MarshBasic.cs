@@ -80,11 +80,13 @@ public class MarshBasic : Sounds
             }
         }
         Vector2 randomOffset = Random.insideUnitCircle * teleportRadius;
-        Vector3 newPosition = new Vector3(teleportCenter.position.x + randomOffset.x, teleportCenter.position.y + randomOffset.y, transform.position.z);
-        transform.position = newPosition;
-        PlaySound(0);
-        GameObject appearEffect = Instantiate(poofEffect, newPosition, Quaternion.identity);
-        Destroy(appearEffect, effectDuration);
+        if (teleportCenter!=null){
+            Vector3 newPosition = new Vector3(teleportCenter.position.x + randomOffset.x, teleportCenter.position.y + randomOffset.y, transform.position.z);
+            transform.position = newPosition;
+            PlaySound(0);
+            GameObject appearEffect = Instantiate(poofEffect, newPosition, Quaternion.identity);
+            Destroy(appearEffect, effectDuration);
+        }
     }
 
     void Update()

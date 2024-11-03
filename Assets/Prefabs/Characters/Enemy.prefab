@@ -136,6 +136,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e91daa2f011ac94c8ba501265b63132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: fa3199031711400449cc61f99e893beb, type: 3}
+  - {fileID: 8300000, guid: 16d958c224112b94abd096903f7a1af6, type: 3}
+  - {fileID: 8300000, guid: 1b25563d75151c54a8bd9af72c712632, type: 3}
+  randSound:
+  - soundArray:
+    - {fileID: 8300000, guid: fa3199031711400449cc61f99e893beb, type: 3}
+    - {fileID: 8300000, guid: 16d958c224112b94abd096903f7a1af6, type: 3}
+    - {fileID: 8300000, guid: 1b25563d75151c54a8bd9af72c712632, type: 3}
   _health: 20
 --- !u!114 &2680932653202087183
 MonoBehaviour:

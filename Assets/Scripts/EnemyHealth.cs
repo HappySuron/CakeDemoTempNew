@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : Sounds
 {
     [SerializeField] private int _health = 10;
 
@@ -20,7 +20,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void GetDamage(int damage){
         _health -= damage;
-        if(_health <= 0){
+        if(_health <= 0) {
+            PlaySound(0, p1: 1, p2: 1, destroyed:true, random: true);
             Debug.Log("Enemy " + gameObject.name + " is dead");
             Destroy(gameObject);
         }

@@ -11,10 +11,10 @@ public class GameManagerScript : MonoBehaviour
     private int indexRoom = 0;
     public GameObject cake;
 
+    public bool isReadyToMove = false;
+
     Transform curTargetPosition;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if(Instance != null && Instance != this){
@@ -22,11 +22,21 @@ public class GameManagerScript : MonoBehaviour
          }else{
              Instance = this;
          }
-       
+       curTargetPosition = rooms[0].GetComponent<RoomVirtual>().startPosition.transform;
+    }
+
+    public void GoAnotherRoom(){
+        indexRoom++;
+        curTargetPosition = rooms[indexRoom].GetComponent<RoomVirtual>().startPosition.transform;
+    }
+
+    public void ChangeCurTarget(Transform newPos){
+        curTargetPosition = newPos;
     }
 
     void Update(){
-         MoveCake(rooms[indexRoom].GetComponent<RoomVirtual>().startPosition.transform.position);
+        if (isReadyToMove && cake!=null)
+         MoveCake(curTargetPosition.position);
     }
 
 
@@ -36,9 +46,5 @@ public class GameManagerScript : MonoBehaviour
         float speed = cake.GetComponent<PlayerHealth>().speed;
         Debug.Log(targetPosition);
         cake.transform.position = Vector3.MoveTowards(cake.transform.position, targetPosition, speed * Time.deltaTime);
-        
     }
-
-
-
 }
