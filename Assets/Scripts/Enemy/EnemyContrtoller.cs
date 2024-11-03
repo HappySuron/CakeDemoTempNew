@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnemyController : Sounds
 {
+    public Animator _animator;
+    public SpriteRenderer _spriteRenderer;
     public float speed = 3.0f;
     public float attackRange = 0.5f;
     public int damage = 10;
@@ -44,10 +46,18 @@ public class EnemyController : Sounds
         Destroy(appearEffect, effectDuration);
     }
 
-    
+
     private void Update()
     {
-    switch (currentState)
+        
+
+        if(rb.linearVelocityX < 0){
+            _spriteRenderer.flipX = true;
+        }else{
+            _spriteRenderer.flipX = false;
+        }
+
+        switch (currentState)
         {
             case State.Idle:
                 Idle();
@@ -71,16 +81,19 @@ public class EnemyController : Sounds
     {
         if (targetUnit != null)
         {
+            _animator.Play("Idle");
             SetState(State.Chasing);
         }
     }
 
 
-        private void Chase()
+    private void Chase()
     {
         if (targetUnit != null)
         {
             MoveTowardsPlayer();
+            _animator.Play("KnifeRun");
+
             float distanceToTargetUnit = Vector3.Distance(transform.position, targetUnit.transform.position);
             if (distanceToTargetUnit > chaseRange)
             {
@@ -105,8 +118,9 @@ public class EnemyController : Sounds
         if (attackTimer <= 0)
         {
             targetUnit.GetComponent<PlayerHealth>().TakeDamage(damage);
+            _animator.Play("Attack");
             HideExclamationMark();
-            PlaySound(1, random:true);
+            PlaySound(1, random: true);
             SetState(State.Cooldown); // Перейти в состояние Cooldown после атаки
         }
     }
@@ -117,23 +131,23 @@ public class EnemyController : Sounds
         cooldownTimer -= Time.deltaTime;
         if (cooldownTimer <= 0)
         {
-        float distanceToTargetUnit = Vector3.Distance(transform.position, targetUnit.transform.position);
-        
-        if (distanceToTargetUnit <= attackRange)
-        {
-            // Если враг находится в радиусе атаки, перейти в состояние атаки
-            SetState(State.Attacking);
-        }
-        else if (distanceToTargetUnit <= chaseRange)
-        {
-            // Если враг находится в радиусе погони, перейти в состояние погони
-           SetState(State.Chasing);
-        }
-        else
-        {
-            // В противном случае вернуться в состояние Idle
-            SetState(State.Idle);
-        }
+            float distanceToTargetUnit = Vector3.Distance(transform.position, targetUnit.transform.position);
+
+            if (distanceToTargetUnit <= attackRange)
+            {
+                // Если враг находится в радиусе атаки, перейти в состояние атаки
+                SetState(State.Attacking);
+            }
+            else if (distanceToTargetUnit <= chaseRange)
+            {
+                // Если враг находится в радиусе погони, перейти в состояние погони
+                SetState(State.Chasing);
+            }
+            else
+            {
+                // В противном случае вернуться в состояние Idle
+                SetState(State.Idle);
+            }
         }
     }
 
@@ -153,28 +167,28 @@ public class EnemyController : Sounds
     }
 
 
-private void MoveTowardsPlayer()
-{
-    // Основное направление к игроку
-    Vector2 direction = (targetUnit.transform.position - transform.position).normalized;
-    Vector2 avoidanceVector = Vector2.zero;
-
-    // Найти всех врагов в радиусе и корректировать направление
-    Collider2D[] neighbors = Physics2D.OverlapCircleAll(transform.position, 0.5f);
-    foreach (var neighbor in neighbors)
+    private void MoveTowardsPlayer()
     {
-        if (neighbor != this.GetComponent<Collider2D>() && neighbor.CompareTag("Enemy"))
+        // Основное направление к игроку
+        Vector2 direction = (targetUnit.transform.position - transform.position).normalized;
+        Vector2 avoidanceVector = Vector2.zero;
+
+        // Найти всех врагов в радиусе и корректировать направление
+        Collider2D[] neighbors = Physics2D.OverlapCircleAll(transform.position, 0.5f);
+        foreach (var neighbor in neighbors)
         {
-            Vector2 diff = transform.position - neighbor.transform.position;
-            avoidanceVector += diff.normalized / diff.sqrMagnitude; // Добавляем вектор избегания
+            if (neighbor != this.GetComponent<Collider2D>() && neighbor.CompareTag("Enemy"))
+            {
+                Vector2 diff = transform.position - neighbor.transform.position;
+                avoidanceVector += diff.normalized / diff.sqrMagnitude; // Добавляем вектор избегания
+            }
         }
+
+        // Уменьшаем влияние avoidanceVector, чтобы враги меньше отклонялись
+        Vector2 movement = (direction + avoidanceVector * 0.5f).normalized;
+
+        rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
     }
-
-    // Уменьшаем влияние avoidanceVector, чтобы враги меньше отклонялись
-    Vector2 movement = (direction + avoidanceVector * 0.5f).normalized;
-
-    rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
-}
 
 
     private void ShowExclamationMark()
@@ -183,6 +197,7 @@ private void MoveTowardsPlayer()
         {
             Vector3 exclamationMarkPosition = transform.position + Vector3.up * exclamationMarkHeight;
             currentExclamationMark = Instantiate(exclamationMarkPrefab, exclamationMarkPosition, Quaternion.identity);
+            _animator.Play("Warning");
             currentExclamationMark.transform.SetParent(transform);
         }
     }
