@@ -32,7 +32,9 @@ public class CandlesTrap : Trap
             {
             Debug.Log("set on fire");
             other.GetComponent<MarshBasic>().SetOnFire();
-
+            }
+            else if (other.CompareTag("Explosive")){
+                other.GetComponent<RedBarrel>().Explode();
             }
         }
 

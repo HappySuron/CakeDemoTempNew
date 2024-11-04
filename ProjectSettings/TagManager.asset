@@ -7,6 +7,8 @@ TagManager:
   - Cake
   - Enemy
   - Knife
+  - Explosive
+  - Heavy
   layers:
   - Default
   - TransparentFX
