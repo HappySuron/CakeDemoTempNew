@@ -257,6 +257,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 16d958c224112b94abd096903f7a1af6, type: 3}
     - {fileID: 8300000, guid: 1b25563d75151c54a8bd9af72c712632, type: 3}
   _health: 20
+  _animator: {fileID: 6863971429519553335}
+  _enemyController: {fileID: 2680932653202087183}
 --- !u!114 &2680932653202087183
 MonoBehaviour:
   m_ObjectHideFlags: 0

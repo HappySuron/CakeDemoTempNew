@@ -9,13 +9,13 @@ public class MarshBasic : Sounds
     private Vector2 movement;
     public bool isOnFire = false;
     private Coroutine fireCoroutine;
-    
-    private SpriteRenderer childSpriteRenderer;
-    public Sprite fireSprite;
 
-    
-    
-    
+    private SpriteRenderer childSpriteRenderer;
+    //public Sprite fireSprite;
+
+
+
+
     public Camera mainCamera;
     public Transform teleportCenter;
     public float teleportRadius = 2f;
@@ -224,6 +224,8 @@ public class MarshBasic : Sounds
 
     public GameObject runObj;
     public GameObject idleObj;
+    public GameObject runFireObj;
+    public GameObject idleFireObj;
 
 
 
@@ -240,16 +242,16 @@ public class MarshBasic : Sounds
     }
 
     public void SetOnFire()
-    {       
+    {
         Transform childTransform = transform.Find("effect");
-            if (childTransform != null)
-            {
-                SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
-                if (childSpriteRenderer != null)
-                {
-                    childSpriteRenderer.sprite = fireSprite;
-                }
-            }
+        if (childTransform != null)
+        {
+            // SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
+            // if (childSpriteRenderer != null)
+            // {
+            //     childSpriteRenderer.sprite = fireSprite;
+            // }
+        }
         if (fireCoroutine != null)
         {
             StopCoroutine(fireCoroutine);
@@ -262,7 +264,7 @@ public class MarshBasic : Sounds
         isOnFire = true;
         Debug.Log("Character is on fire!");
         yield return new WaitForSeconds(5f);
-        isOnFire = false; 
+        isOnFire = false;
         Debug.Log("Character is no longer on fire.");
         fireCoroutine = null;
         OnDeathEvent();
@@ -270,19 +272,21 @@ public class MarshBasic : Sounds
 
 
 
-    public void OnDeathEvent(){
+    public void OnDeathEvent()
+    {
         isOnFire = false;
         Transform childTransform = transform.Find("effect");
         if (childTransform != null)
         {
-        SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
+            SpriteRenderer childSpriteRenderer = childTransform.GetComponent<SpriteRenderer>();
             if (childSpriteRenderer != null)
             {
                 childSpriteRenderer.sprite = null;
             }
         }
         Vector2 randomOffset = Random.insideUnitCircle * teleportRadius;
-        if (teleportCenter!=null){
+        if (teleportCenter != null)
+        {
             Vector3 newPosition = new Vector3(teleportCenter.position.x + randomOffset.x, teleportCenter.position.y + randomOffset.y, transform.position.z);
             transform.position = newPosition;
             PlaySound(0);
@@ -301,21 +305,55 @@ public class MarshBasic : Sounds
         Vector3 screenBottom = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, 0, mainCamera.nearClipPlane));
         Vector3 screenTop = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, 1, mainCamera.nearClipPlane));
 
-        if(movement.x > 0){
-            transform.localScale = new Vector3(1,1,1);
+        if (movement.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
         }
-        if(movement.x < 0){
-            transform.localScale = new Vector3(-1,1,1);
+        if (movement.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        if(movement.x == 0 && movement.y == 0){
+
+
+        if (movement.x == 0 && movement.y == 0)
+        {
+
+            if (isOnFire)
+            {
+                runObj.SetActive(false);
+                idleObj.SetActive(false);
+                runFireObj.SetActive(false);
+                idleFireObj.SetActive(true);
+            }
+            else
+            {
+                runObj.SetActive(false);
+                idleObj.SetActive(true);
+                runFireObj.SetActive(false);
+                idleFireObj.SetActive(false);
+            }
+
+
+        }
+        else
+        {
+            if (isOnFire)
+            {
+                runObj.SetActive(false);
+                idleObj.SetActive(false);
+                runFireObj.SetActive(true);
+                idleFireObj.SetActive(false);
+            }
+            else
+            {
+                runObj.SetActive(true);
+                idleObj.SetActive(false);
+                runFireObj.SetActive(false);
+                idleFireObj.SetActive(false);
+            }
+
             
-
-            runObj.SetActive(false);
-            idleObj.SetActive(true);
-        }else{
-            runObj.SetActive(true);
-            idleObj.SetActive(false);
         }
 
         bool isTeleported = false;
@@ -331,7 +369,7 @@ public class MarshBasic : Sounds
 
         if (isTeleported)
         {
-            OnDeathEvent(); 
+            OnDeathEvent();
         }
     }
 }

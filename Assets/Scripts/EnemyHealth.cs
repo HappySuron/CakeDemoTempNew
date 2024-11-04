@@ -3,6 +3,8 @@ using UnityEngine;
 public class EnemyHealth : Sounds
 {
     [SerializeField] private int _health = 10;
+    public Animator _animator;
+    public EnemyController _enemyController;
 
 
 
@@ -25,7 +27,9 @@ public class EnemyHealth : Sounds
             Debug.Log("Enemy " + gameObject.name + " is dead");
             GameManagerScript _managerInstance = GameManagerScript.Instance;
             _managerInstance.enemyCounter--;
-            Destroy(gameObject);
+            _enemyController.enabled = false;
+            _animator.Play("KnifeDeath");
+            Destroy(gameObject,5);
         }
     }
 }
