@@ -40,6 +40,10 @@ public class EnemyEncounterRoomWater : RoomVirtual
         }
         spawner.GetComponent<EnemySpawner>().DestroyAllOfEnemies();
 
+
+        GameManagerScript _managerInstance = GameManagerScript.Instance;
+        _managerInstance.enemyCounter = 0; // Сброс счетчика здесь
+
         for (int i = 0; i < bucketsOfWater.Length; i++)
         {
             if (bucketsOfWater[i] == null)

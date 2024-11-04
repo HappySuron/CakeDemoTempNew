@@ -37,7 +37,7 @@ public class CakeKnife : MonoBehaviour
 
             foreach (Collider2D collider in colliders)
             {
-                if (collider.CompareTag("Enemy"))
+                if (collider.CompareTag("Enemy") && !collider.GetComponent<EnemyHealth>().isAlreadyDead)
                 {
                     float distanceToTarget = Vector2.Distance(transform.position, collider.transform.position);
 

@@ -6,6 +6,8 @@ public class EnemyHealth : Sounds
     public Animator _animator;
     public EnemyController _enemyController;
 
+    public bool isAlreadyDead;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,6 +30,7 @@ public class EnemyHealth : Sounds
             GameManagerScript _managerInstance = GameManagerScript.Instance;
             _managerInstance.enemyCounter--;
             _enemyController.enabled = false;
+            isAlreadyDead = true;
             _animator.Play("KnifeDeath");
             Destroy(gameObject,5);
         }
