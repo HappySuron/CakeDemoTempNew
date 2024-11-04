@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 18cdd47a73173ad4bb48c4e936dde084
+guid: 61ade089733c4a041b59dbd0e1e01d06
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7932798033344189819
-    second: grass_0
+      213: 1525039874887651711
+    second: Tort_atack_0
   - first:
-      213: 917857947829267716
-    second: grass_1
+      213: -4162613560814781454
+    second: Tort_atack_1
   - first:
-      213: -6996743899038756316
-    second: grass_2
+      213: 7897754226899430935
+    second: Tort_atack_2
   - first:
-      213: -4875790746840711183
-    second: grass_3
+      213: -3015243884249034090
+    second: Tort_atack_3
+  - first:
+      213: -5929476420569710514
+    second: Tort_atack_4
+  - first:
+      213: 9047444698524663148
+    second: Tort_atack_5
+  - first:
+      213: -1714077397480808346
+    second: Tort_atack_6
+  - first:
+      213: 3354735517309681137
+    second: Tort_atack_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +121,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grass_0
+      name: Tort_atack_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 18
-        width: 67
-        height: 92
+        x: 103
+        y: 627
+        width: 346
+        height: 406
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b75d56418c5f61e60800000000000000
-      internalID: 7932798033344189819
+      spriteID: f711cfaafa70a2510800000000000000
+      internalID: 1525039874887651711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_1
+      name: Tort_atack_1
       rect:
         serializedVersion: 2
-        x: 158
-        y: 12
-        width: 66
-        height: 69
+        x: 512
+        y: 627
+        width: 376
+        height: 406
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40de1a6c0f2ecbc00800000000000000
-      internalID: 917857947829267716
+      spriteID: 2fb396a550d6b36c0800000000000000
+      internalID: -4162613560814781454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_2
+      name: Tort_atack_2
       rect:
         serializedVersion: 2
-        x: 293
-        y: 22
-        width: 34
-        height: 33
+        x: 984
+        y: 627
+        width: 346
+        height: 406
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 422d9618e7296ee90800000000000000
-      internalID: -6996743899038756316
+      spriteID: 71e2ea110a57a9d60800000000000000
+      internalID: 7897754226899430935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_3
+      name: Tort_atack_3
       rect:
         serializedVersion: 2
-        x: 418
-        y: 24
-        width: 50
-        height: 18
+        x: 1444
+        y: 627
+        width: 311
+        height: 406
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ff3c671626b55cb0800000000000000
-      internalID: -4875790746840711183
+      spriteID: 692da28a9a3b726d0800000000000000
+      internalID: -3015243884249034090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tort_atack_5
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 69
+        width: 349
+        height: 406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6dbd84940bfe8d70800000000000000
+      internalID: 9047444698524663148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tort_atack_6
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 67
+        width: 497
+        height: 405
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66061a540bf5638e0800000000000000
+      internalID: -1714077397480808346
       vertices: []
       indices: 
       edges: []
@@ -200,7 +256,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 70c77bf46b90a0d42b0232fd55957563
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +266,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      grass_0: 7932798033344189819
-      grass_1: 917857947829267716
-      grass_2: -6996743899038756316
-      grass_3: -4875790746840711183
+      Tort_atack_0: 1525039874887651711
+      Tort_atack_1: -4162613560814781454
+      Tort_atack_2: 7897754226899430935
+      Tort_atack_3: -3015243884249034090
+      Tort_atack_5: 9047444698524663148
+      Tort_atack_6: -1714077397480808346
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

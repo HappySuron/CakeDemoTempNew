@@ -247,7 +247,9 @@ MonoBehaviour:
   indexRoom: 0
   cake: {fileID: 1340355868}
   isReadyToMove: 0
+
   finalleSpot: {fileID: 711578202}
+
   enemyCounter: 0
 --- !u!1 &120791934
 GameObject:
@@ -1711,6 +1713,11 @@ Transform:
   - {fileID: 1902682912}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1318726051 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3105879808190270791, guid: 1b6886cce99ae524bbb612fe8398fb49, type: 3}
+  m_PrefabInstance: {fileID: 1471976018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1340355868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8085966460702478734, guid: 1b6886cce99ae524bbb612fe8398fb49, type: 3}

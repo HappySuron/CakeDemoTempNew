@@ -1,73 +1,43 @@
 fileFormatVersion: 2
-guid: 7f13ef0f31f82ef409c6657fc1b12ec6
+guid: 01e082857b43de34fa32dfd5a30816b3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6453221117283072324
-    second: Tort_death_0
+      213: 5885257258367217022
+    second: tort_run_0
   - first:
-      213: 1023587236045533750
-    second: Tort_death_1
+      213: 3841782194778092493
+    second: tort_run_1
   - first:
-      213: 1486137230073828392
-    second: Tort_death_2
+      213: -6049559984875074971
+    second: tort_run_2
   - first:
-      213: 5147362039955834245
-    second: Tort_death_3
+      213: -3102779650971551736
+    second: tort_run_3
   - first:
-      213: 5952964862675333471
-    second: Tort_death_4
+      213: 743178748250518511
+    second: tort_run_4
   - first:
-      213: -1594724900224751178
-    second: Tort_death_5
+      213: 1672003100348380094
+    second: tort_run_5
   - first:
-      213: 2705187138269978495
-    second: Tort_death_6
+      213: -2098874827638459610
+    second: tort_run_6
   - first:
-      213: 5160318878159736160
-    second: Tort_death_7
+      213: -898044202118332390
+    second: tort_run_7
   - first:
-      213: -7903405301841886758
-    second: Tort_death_8
+      213: 5376726575396100925
+    second: tort_run_8
   - first:
-      213: -2792866020009021761
-    second: Tort_death_9
+      213: -5603257258568018807
+    second: tort_run_9
   - first:
-      213: -2256140441843524878
-    second: Tort_death_10
+      213: 7829445099483119705
+    second: tort_run_10
   - first:
-      213: 4903773631728751738
-    second: Tort_death_11
-  - first:
-      213: -6579027999455348999
-    second: Tort_death_12
-  - first:
-      213: -6517462708211779390
-    second: Tort_death_13
-  - first:
-      213: 4317564395930991119
-    second: Tort_death_14
-  - first:
-      213: 5307970361154895273
-    second: Tort_death_15
-  - first:
-      213: -2087401907656720762
-    second: Tort_death_16
-  - first:
-      213: 3493960931521415121
-    second: Tort_death_17
-  - first:
-      213: -6300013800182684744
-    second: Tort_death_18
-  - first:
-      213: -80312378377656270
-    second: Tort_death_19
-  - first:
-      213: -4991904399346680669
-    second: Tort_death_20
-  - first:
-      213: -7045310290337852456
-    second: Tort_death_21
+      213: 7277723011171007351
+    second: tort_run_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -159,30 +129,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tort_death_0
+      name: tort_run_4
       rect:
         serializedVersion: 2
-        x: 55
-        y: 638
-        width: 361
-        height: 422
+        x: 1480
+        y: 575
+        width: 383
+        height: 478
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb60b4f959d8176a0800000000000000
-      internalID: -6453221117283072324
+      spriteID: 56a8a16ee35ab0ca0800000000000000
+      internalID: -6049559984875074971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tort_death_1
+      name: tort_run_1
       rect:
         serializedVersion: 2
-        x: 497
-        y: 632
-        width: 361
-        height: 423
+        x: 73
+        y: 578
+        width: 371
+        height: 432
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6323e110b23843e00800000000000000
-      internalID: 1023587236045533750
+      spriteID: 808b78fb856b0f4d0800000000000000
+      internalID: -3102779650971551736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tort_death_2
+      name: tort_run_2
       rect:
         serializedVersion: 2
-        x: 939
-        y: 640
-        width: 361
-        height: 420
+        x: 529
+        y: 581
+        width: 303
+        height: 437
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8249806dfe1df9410800000000000000
-      internalID: 1486137230073828392
+      spriteID: fe3771e422d405a00800000000000000
+      internalID: 743178748250518511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tort_death_3
+      name: tort_run_3
       rect:
         serializedVersion: 2
-        x: 1377
-        y: 640
-        width: 361
-        height: 420
+        x: 987
+        y: 579
+        width: 330
+        height: 439
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 585c5e1e08a1f6740800000000000000
-      internalID: 5147362039955834245
+      spriteID: eb3fd9b06f5243710800000000000000
+      internalID: 1672003100348380094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tort_death_4
+      name: tort_run_5
       rect:
         serializedVersion: 2
-        x: 875
-        y: 124
-        width: 497
-        height: 496
+        x: 60
+        y: 60
+        width: 345
+        height: 431
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f513520a00e2d9250800000000000000
-      internalID: 5952964862675333471
+      spriteID: a1043246e818983f0800000000000000
+      internalID: -898044202118332390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tort_death_11
+      name: tort_run_6
       rect:
         serializedVersion: 2
-        x: 58
-        y: 125
-        width: 361
-        height: 420
+        x: 533
+        y: 58
+        width: 330
+        height: 447
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a749e120324bd0440800000000000000
-      internalID: 4903773631728751738
+      spriteID: 9849cede53b3d32b0800000000000000
+      internalID: -5603257258568018807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tort_death_12
+      name: tort_run_7
       rect:
         serializedVersion: 2
-        x: 498
-        y: 125
-        width: 361
-        height: 420
+        x: 1027
+        y: 60
+        width: 331
+        height: 447
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,30 +280,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f67d1544e892b4a0800000000000000
-      internalID: -6579027999455348999
+      spriteID: 9504d17f5d6c7ac60800000000000000
+      internalID: 7829445099483119705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tort_death_21
+      name: tort_run_8
       rect:
         serializedVersion: 2
-        x: 1366
-        y: 47
-        width: 511
-        height: 576
-      alignment: 9
-      pivot: {x: 0.45076865, y: 0.5414922}
+        x: 1509
+        y: 68
+        width: 303
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d3120c5e970a3e90800000000000000
-      internalID: -7045310290337852456
+      spriteID: 77bb886058aaff460800000000000000
+      internalID: 7277723011171007351
       vertices: []
       indices: 
       edges: []
@@ -355,7 +312,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9742de408a077044893bb3bdcfb106c6
+    spriteID: 775fbb3b01ccd124297484de2b10fe24
     internalID: 0
     vertices: []
     indices: 
@@ -365,28 +322,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tort_death_0: -6453221117283072324
-      Tort_death_1: 1023587236045533750
-      Tort_death_10: -2256140441843524878
-      Tort_death_11: 4903773631728751738
-      Tort_death_12: -6579027999455348999
-      Tort_death_13: -6517462708211779390
-      Tort_death_14: 4317564395930991119
-      Tort_death_15: 5307970361154895273
-      Tort_death_16: -2087401907656720762
-      Tort_death_17: 3493960931521415121
-      Tort_death_18: -6300013800182684744
-      Tort_death_19: -80312378377656270
-      Tort_death_2: 1486137230073828392
-      Tort_death_20: -4991904399346680669
-      Tort_death_21: -7045310290337852456
-      Tort_death_3: 5147362039955834245
-      Tort_death_4: 5952964862675333471
-      Tort_death_5: -1594724900224751178
-      Tort_death_6: 2705187138269978495
-      Tort_death_7: 5160318878159736160
-      Tort_death_8: -7903405301841886758
-      Tort_death_9: -2792866020009021761
+      tort_run_1: -3102779650971551736
+      tort_run_2: 743178748250518511
+      tort_run_3: 1672003100348380094
+      tort_run_4: -6049559984875074971
+      tort_run_5: -898044202118332390
+      tort_run_6: -5603257258568018807
+      tort_run_7: 7829445099483119705
+      tort_run_8: 7277723011171007351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

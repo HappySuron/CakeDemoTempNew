@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 
 public class GameManagerScript : MonoBehaviour
@@ -15,6 +16,7 @@ public class GameManagerScript : MonoBehaviour
 
     Transform curTargetPosition;
 
+    public Animator animatorCake;
 
     public Transform finalleSpot;
 
@@ -43,8 +45,14 @@ public class GameManagerScript : MonoBehaviour
     }
 
     void Update(){
-        if (isReadyToMove && cake!=null)
+        if (isReadyToMove && cake!=null){
          MoveCake(curTargetPosition.position);
+         animatorCake.SetBool("isMove",isReadyToMove);}
+        if (Mathf.Abs(curTargetPosition.position.x - cake.transform.position.x) < 0.1f)
+        {
+            animatorCake.SetBool("isMove",false);
+        }
+        
     }
 
 
