@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public Transform spawnPoint;
+    //public Transform spawnPoint;
     public float spawnRadius = 5.0f;
     public int maxEnemies = 3;
     private List<GameObject> enemies = new List<GameObject>();
@@ -18,7 +18,8 @@ public class EnemySpawner : MonoBehaviour
     }
     private void SpawnEnemy()
     {
-        Vector2 spawnPosition = spawnPoint.position + (Vector3)Random.insideUnitCircle * spawnRadius;
+        Debug.Log("FUFUFUFUFUFUFUUFUFFUU " + transform.position);
+        Vector2 spawnPosition = this.transform.position + (Vector3)Random.insideUnitCircle * spawnRadius;
         GameObject newEnemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
         enemies.Add(newEnemy);
         GameManagerScript _managerInstance = GameManagerScript.Instance;

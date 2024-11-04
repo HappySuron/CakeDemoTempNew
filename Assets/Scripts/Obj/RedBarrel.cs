@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class RedBarrel : MonoBehaviour
+public class RedBarrel : Sounds
 {
     [SerializeField] private int _damage = 10;
     [SerializeField] private float damageRadius = 10f;
@@ -28,6 +28,7 @@ public class RedBarrel : MonoBehaviour
         GameObject appearEffect = Instantiate(explotionEffect, transform.position, Quaternion.identity);
         Destroy(appearEffect, effectDuration);
         Destroy(this.gameObject);
+        PlaySound(0, destroyed:true);
     }
 
     private void DamageOnExplosion()
