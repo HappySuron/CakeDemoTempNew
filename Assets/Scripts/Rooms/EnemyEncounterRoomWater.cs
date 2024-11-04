@@ -60,4 +60,12 @@ public class EnemyEncounterRoomWater : RoomVirtual
         this.encounterPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
         this.finishPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
     }
+
+    
+    override public void FinishPositionAction(){
+        Debug.Log("FinishPosition");
+        GameManagerScript _managerInstance = GameManagerScript.Instance;
+        _managerInstance.ResetNextRoom();
+        _managerInstance.GoAnotherRoom();
+    }
 }
