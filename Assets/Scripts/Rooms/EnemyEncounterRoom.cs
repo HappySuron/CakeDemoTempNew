@@ -55,4 +55,15 @@ public class EnemyEncounterRoom : RoomVirtual
         this.encounterPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
         this.finishPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
     }
+
+        override public void FinishPositionAction(){
+        Debug.Log("FinishPosition");
+        SoundManager _managerSoundInstance = SoundManager.Instance;
+        _managerSoundInstance.PlaySound(4, random:true, p1:1, p2:1);
+
+
+        GameManagerScript _managerInstance = GameManagerScript.Instance;
+        _managerInstance.ResetNextRoom();
+        _managerInstance.GoAnotherRoom();
+    }
 }

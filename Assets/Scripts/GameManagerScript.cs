@@ -67,4 +67,8 @@ public class GameManagerScript : MonoBehaviour
         if (rooms[indexRoom+1]!=null)
             rooms[indexRoom+1].GetComponent<RoomVirtual>().ResetCurrentRoom();
     }
+
+    public void StartGame(){
+        isReadyToMove = true;
+    }
 }

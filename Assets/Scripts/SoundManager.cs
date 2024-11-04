@@ -20,7 +20,8 @@ public class SoundManager : Sounds
         } else {
             Instance = this;
         }
-        PlaySound(0);
+        //PlaySound(0);
+        //SayIntroductionLine();
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class SoundManager : Sounds
     6 - weapon
     */
     public void SayIntroductionLine() {
-      //  PlaySound(4, random:true, p1:1, p2: 1);
+      PlaySound(0, random:true, p1:1, p2: 1);
     }
 
 }

@@ -18,7 +18,8 @@ public class DoorRoomWithStatue : RoomVirtual
         {
             yield return null;
         }
-
+        SoundManager _managerSoundInstance = SoundManager.Instance;
+        _managerSoundInstance.PlaySound(7, p1:1, p2:1);
         GameManagerScript _managerInstance = GameManagerScript.Instance;
         _managerInstance.ChangeCurTarget(this.finishPosition);
     }

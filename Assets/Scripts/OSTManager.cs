@@ -12,7 +12,7 @@ public class OSTManager : Sounds
         } else {
             Instance = this;
         }
-        StartOst();
+        //StartOst();
     }
     void Update()
     {
