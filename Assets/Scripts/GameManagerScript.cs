@@ -16,6 +16,9 @@ public class GameManagerScript : MonoBehaviour
     Transform curTargetPosition;
 
 
+    public Transform finalleSpot;
+
+
     public int enemyCounter;
 
     void Start()
@@ -31,7 +34,8 @@ public class GameManagerScript : MonoBehaviour
     public void GoAnotherRoom(){
         indexRoom++;
         Debug.Log("GoAnotherRoomMan");
-        curTargetPosition = rooms[indexRoom].GetComponent<RoomVirtual>().startPosition.transform;
+        if (indexRoom< rooms.Count)
+            curTargetPosition = rooms[indexRoom].GetComponent<RoomVirtual>().startPosition.transform;
     }
 
     public void ChangeCurTarget(Transform newPos){
@@ -64,8 +68,16 @@ public class GameManagerScript : MonoBehaviour
 
 
     public void ResetNextRoom(){
-        if (rooms[indexRoom+1]!=null)
+        if (indexRoom + 1 < rooms.Count){
             rooms[indexRoom+1].GetComponent<RoomVirtual>().ResetCurrentRoom();
+        }
+        else{
+        
+        if (FadeOutManager.Instance != null)
+        {
+            FadeOutManager.Instance.StartFadeOut(1f);
+        }
+        }
     }
 
     public void StartGame(){
