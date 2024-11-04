@@ -16,15 +16,18 @@ public class RedBarrel : MonoBehaviour
             {
                 if (marshBasic.isOnFire)
                 {
-                    DamageOnExplosion();
-
-                    GameObject appearEffect = Instantiate(explotionEffect, transform.position, Quaternion.identity);
-                    Destroy(appearEffect, effectDuration);
-                    Destroy(this.gameObject);
+                    Explode();
                     marshBasic.GetComponent<MarshBasic>().OnDeathEvent();
                 }
             }
         }
+    }
+
+    public void Explode(){
+        DamageOnExplosion();
+        GameObject appearEffect = Instantiate(explotionEffect, transform.position, Quaternion.identity);
+        Destroy(appearEffect, effectDuration);
+        Destroy(this.gameObject);
     }
 
     private void DamageOnExplosion()

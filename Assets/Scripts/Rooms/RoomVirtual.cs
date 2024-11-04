@@ -67,4 +67,8 @@ public class RoomVirtual: MonoBehaviour
         encounterPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
         finishPosition.GetComponent<RoomPositionTriggerEnter>().alreadyPassed = false;
     }
+
+
+
+    virtual public void ActivateAction(){}
 }
