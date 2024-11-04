@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 356fd4ff8e81e5241b1e0b359f2c705c
+guid: 0fc6010bb899c2c45830bb569d94c1b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5028958502302972877
-    second: marsh_run_smoke_0
+      213: 6136029538011355487
+    second: marsh_idle_0
   - first:
-      213: -3218027133527071607
-    second: marsh_run_smoke_1
+      213: -5253262187399595400
+    second: marsh_idle_1
   - first:
-      213: -7479973735190642974
-    second: marsh_run_smoke_2
+      213: -8091450370673058959
+    second: marsh_idle_2
   - first:
-      213: 6093465353861793929
-    second: marsh_run_smoke_3
+      213: 4813246001073462538
+    second: marsh_idle_3
   - first:
-      213: 8009653498697876253
-    second: marsh_run_smoke_4
+      213: -5163441688070497271
+    second: marsh_idle_4
   - first:
-      213: 5582570324981967071
-    second: marsh_run_smoke_5
+      213: -1985285775135186374
+    second: marsh_idle_5
   - first:
-      213: 1127497977409417307
-    second: marsh_run_smoke_6
+      213: -9163648555191635341
+    second: marsh_idle_6
   - first:
-      213: 3811159944271254965
-    second: marsh_run_smoke_7
+      213: -466363579014620627
+    second: marsh_idle_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,177 +134,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: marsh_run_smoke_0
+      name: marsh_idle_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 237
-        height: 241
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dcbf2fffc137ac540800000000000000
-      internalID: 5028958502302972877
+      spriteID: a1c6237ac5e7c094289ace84e4498007
+      internalID: -960556310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: marsh_run_smoke_1
+      name: marsh_idle_1
       rect:
         serializedVersion: 2
-        x: 258
-        y: 1
-        width: 227
-        height: 242
+        x: 256
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 984ec843f554753d0800000000000000
-      internalID: -3218027133527071607
+      spriteID: e77659e97d94c564ba782e5dc7c9e601
+      internalID: -1098727006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: marsh_run_smoke_2
+      name: marsh_idle_2
       rect:
         serializedVersion: 2
-        x: 519
-        y: 1
-        width: 206
-        height: 237
+        x: 512
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2eeb5b8b48bc13890800000000000000
-      internalID: -7479973735190642974
+      spriteID: 2f9cd56efde1c81498cb4dab67935a36
+      internalID: 2101079502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: marsh_run_smoke_3
+      name: marsh_idle_3
       rect:
         serializedVersion: 2
-        x: 774
-        y: 2
-        width: 218
-        height: 243
+        x: 768
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 988051c6476509450800000000000000
-      internalID: 6093465353861793929
+      spriteID: bc94e390c9dd2f74ca0b4e122005ddb2
+      internalID: -1827058723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: marsh_run_smoke_4
+      name: marsh_idle_4
       rect:
         serializedVersion: 2
-        x: 1036
-        y: 2
-        width: 217
-        height: 241
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d130adb8b61082f60800000000000000
-      internalID: 8009653498697876253
+      spriteID: 133055e92a1cbd449ba30e4dfc4414e5
+      internalID: 1296105005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: marsh_run_smoke_5
+      name: marsh_idle_5
       rect:
         serializedVersion: 2
-        x: 1288
-        y: 1
-        width: 221
-        height: 242
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fd8ef220226497d40800000000000000
-      internalID: 5582570324981967071
+      spriteID: 2f0a9d4cf53cdd8419ecbf0a0849efd4
+      internalID: -1360054656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: marsh_run_smoke_6
+      name: marsh_idle_6
       rect:
         serializedVersion: 2
-        x: 1539
-        y: 1
-        width: 220
-        height: 241
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b50b57ccf6da5af00800000000000000
-      internalID: 1127497977409417307
+      spriteID: 4fef25451888b764499cc51ca3d5bf60
+      internalID: -1384263797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: marsh_run_smoke_7
+      name: marsh_idle_7
       rect:
         serializedVersion: 2
-        x: 1800
-        y: 3
-        width: 215
-        height: 239
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b55c74e6c5f3e430800000000000000
-      internalID: 3811159944271254965
+      spriteID: ad8da460ebfec0840a5173c5590189a9
+      internalID: -2019622407
       vertices: []
       indices: 
       edges: []
@@ -313,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cff8359579b19c849a83990006c5669a
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      marsh_run_smoke_0: 5028958502302972877
-      marsh_run_smoke_1: -3218027133527071607
-      marsh_run_smoke_2: -7479973735190642974
-      marsh_run_smoke_3: 6093465353861793929
-      marsh_run_smoke_4: 8009653498697876253
-      marsh_run_smoke_5: 5582570324981967071
-      marsh_run_smoke_6: 1127497977409417307
-      marsh_run_smoke_7: 3811159944271254965
+      marsh_idle_0: -960556310
+      marsh_idle_1: -1098727006
+      marsh_idle_2: 2101079502
+      marsh_idle_3: -1827058723
+      marsh_idle_4: 1296105005
+      marsh_idle_5: -1360054656
+      marsh_idle_6: -1384263797
+      marsh_idle_7: -2019622407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

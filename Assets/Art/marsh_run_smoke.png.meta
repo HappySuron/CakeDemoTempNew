@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 356fd4ff8e81e5241b1e0b359f2c705c
+guid: 69623d199d96c524fb47909a934ca22c
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -137,20 +137,20 @@ TextureImporter:
       name: marsh_run_smoke_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 237
-        height: 241
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dcbf2fffc137ac540800000000000000
-      internalID: 5028958502302972877
+      spriteID: c5529e3f98a817b4b8c042df76375276
+      internalID: 383335301
       vertices: []
       indices: 
       edges: []
@@ -159,20 +159,20 @@ TextureImporter:
       name: marsh_run_smoke_1
       rect:
         serializedVersion: 2
-        x: 258
-        y: 1
-        width: 227
-        height: 242
+        x: 256
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 984ec843f554753d0800000000000000
-      internalID: -3218027133527071607
+      spriteID: b39ee597a1890bd49bd77068464a4bb3
+      internalID: 26873436
       vertices: []
       indices: 
       edges: []
@@ -181,20 +181,20 @@ TextureImporter:
       name: marsh_run_smoke_2
       rect:
         serializedVersion: 2
-        x: 519
-        y: 1
-        width: 206
-        height: 237
+        x: 512
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2eeb5b8b48bc13890800000000000000
-      internalID: -7479973735190642974
+      spriteID: 299eb34269cc12640bc5d550756ba943
+      internalID: -580930789
       vertices: []
       indices: 
       edges: []
@@ -203,20 +203,20 @@ TextureImporter:
       name: marsh_run_smoke_3
       rect:
         serializedVersion: 2
-        x: 774
-        y: 2
-        width: 218
-        height: 243
+        x: 768
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 988051c6476509450800000000000000
-      internalID: 6093465353861793929
+      spriteID: 067acae020e800942a1c979916628e0a
+      internalID: 1274435225
       vertices: []
       indices: 
       edges: []
@@ -225,20 +225,20 @@ TextureImporter:
       name: marsh_run_smoke_4
       rect:
         serializedVersion: 2
-        x: 1036
-        y: 2
-        width: 217
-        height: 241
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d130adb8b61082f60800000000000000
-      internalID: 8009653498697876253
+      spriteID: c5f23efce3368bb4eb1c111242d00b8f
+      internalID: -1967751968
       vertices: []
       indices: 
       edges: []
@@ -247,20 +247,20 @@ TextureImporter:
       name: marsh_run_smoke_5
       rect:
         serializedVersion: 2
-        x: 1288
-        y: 1
-        width: 221
-        height: 242
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fd8ef220226497d40800000000000000
-      internalID: 5582570324981967071
+      spriteID: def27c249fc6b464093d803a03094fef
+      internalID: -1882021488
       vertices: []
       indices: 
       edges: []
@@ -269,20 +269,20 @@ TextureImporter:
       name: marsh_run_smoke_6
       rect:
         serializedVersion: 2
-        x: 1539
-        y: 1
-        width: 220
-        height: 241
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b50b57ccf6da5af00800000000000000
-      internalID: 1127497977409417307
+      spriteID: 969f7e22ec4e53245a708f21a46ddc35
+      internalID: 1588239992
       vertices: []
       indices: 
       edges: []
@@ -291,20 +291,20 @@ TextureImporter:
       name: marsh_run_smoke_7
       rect:
         serializedVersion: 2
-        x: 1800
-        y: 3
-        width: 215
-        height: 239
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b55c74e6c5f3e430800000000000000
-      internalID: 3811159944271254965
+      spriteID: 2f0d35411e6baa747a9683abc3635d92
+      internalID: 1737376724
       vertices: []
       indices: 
       edges: []
@@ -313,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5aa334d0d7f7e7244b63b5af1cb9f533
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      marsh_run_smoke_0: 5028958502302972877
-      marsh_run_smoke_1: -3218027133527071607
-      marsh_run_smoke_2: -7479973735190642974
-      marsh_run_smoke_3: 6093465353861793929
-      marsh_run_smoke_4: 8009653498697876253
-      marsh_run_smoke_5: 5582570324981967071
-      marsh_run_smoke_6: 1127497977409417307
-      marsh_run_smoke_7: 3811159944271254965
+      marsh_run_smoke_0: 383335301
+      marsh_run_smoke_1: 26873436
+      marsh_run_smoke_2: -580930789
+      marsh_run_smoke_3: 1274435225
+      marsh_run_smoke_4: -1967751968
+      marsh_run_smoke_5: -1882021488
+      marsh_run_smoke_6: 1588239992
+      marsh_run_smoke_7: 1737376724
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

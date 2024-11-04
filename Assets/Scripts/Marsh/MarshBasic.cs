@@ -26,6 +26,208 @@ public class MarshBasic : Sounds
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public GameObject runObj;
+    public GameObject idleObj;
+
+
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -98,6 +300,23 @@ public class MarshBasic : Sounds
         Vector3 screenRight = mainCamera.ViewportToWorldPoint(new Vector3(1, 0.5f, mainCamera.nearClipPlane));
         Vector3 screenBottom = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, 0, mainCamera.nearClipPlane));
         Vector3 screenTop = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, 1, mainCamera.nearClipPlane));
+
+        if(movement.x > 0){
+            transform.localScale = new Vector3(1,1,1);
+        }
+        if(movement.x < 0){
+            transform.localScale = new Vector3(-1,1,1);
+        }
+
+        if(movement.x == 0 && movement.y == 0){
+            
+
+            runObj.SetActive(false);
+            idleObj.SetActive(true);
+        }else{
+            runObj.SetActive(true);
+            idleObj.SetActive(false);
+        }
 
         bool isTeleported = false;
 
